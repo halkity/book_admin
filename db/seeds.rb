@@ -14,3 +14,10 @@ publisher.books << Book.create(
   published_on: Time.current,
   price: 2000,
 )
+
+matz = Author.create(name: "Matsumoto", penname: "Matz")
+dhh = Author.create(name: "David Heinemeier Hansson", penname: "DHH")
+
+matz.books << Book.find(1)
+matz.books << Book.find(2)
+Book.find(1).authors << dhh
